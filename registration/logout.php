@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db.php';
+require_once '../db.php';
 
 $_SESSION = [];
 if (isset($_COOKIE[session_name()])) {

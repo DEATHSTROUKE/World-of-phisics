@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600,700|Montserrat:400,600,700&display=swap&subset=cyrillic,cyrillic-ext"
           rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="profile/style.css" rel="stylesheet">
     <title>Мир физики</title>
 </head>
 <body>
@@ -16,15 +16,15 @@
         <div class="container">
             <div class="header__top">
                 <div class="header__logo">
-                    <img src="images/logo.png" alt="Мир физики" class="header__logo__img">
+                    <img src="../images/logo.png" alt="Мир физики" class="header__logo__img">
                     <div class="header__logo__text">Мир физики</div>
                 </div>
                 <nav class="nav">
-                    <form method="get" action="../registration">
-                        <input type="submit" formaction="registration/signin.php" class="btn__disactive"
-                               value="Вход">
-                        <input type="submit" formaction="registration/signin.php" class="btn__disactive"
-                               value="Регистрация">
+                    <form method="get">
+                        <input type="submit" formaction="profile.php" class="btn_profile"
+                               value="">
+                        <input type="submit" formaction="#" class="btn_bell"
+                               value="">
                     </form>
                 </nav>
                 <div class="hamburger">
@@ -56,7 +56,7 @@
                 Готовься к предстоящим экзаменам
                 <input type="submit" class="btn__disactive btn_blue" value="Вперед">
             </div>
-            <img src="images/img2.jpg" alt="" class="pre__img">
+            <img src="../images/img2.jpg" alt="" class="pre__img">
         </div>
     </div>
 </section>
@@ -64,7 +64,7 @@
     <div class="container">
         <hr class="line__title">
         <div class="prepare">
-            <img src="images/img1.jpg" alt="" class="pre__img pre__img2">
+            <img src="../images/img1.jpg" alt="" class="pre__img pre__img2">
             <div class="pre__text">
                 Получай домашние задания от преподавателя
                 <input type="submit" class="btn__disactive btn_blue" value="Посмотреть">
@@ -80,14 +80,14 @@
                 Улучшай свой рейтинг и соревнуйся
                 <input type="submit" class="btn__disactive btn_blue" value="Рейтинг">
             </div>
-            <img src="images/rating.jpg" alt="" class="pre__img pre__img3">
+            <img src="../images/rating.jpg" alt="" class="pre__img pre__img3">
         </div>
     </div>
 </section>
 <footer class="footer">
     <div class="container">
         <div class="footer__logo">
-            <img src="images/logo.png" alt="Мир физики" class="footer__logo__img">
+            <img src="../images/logo.png" alt="Мир физики" class="footer__logo__img">
             <div class="header__logo__text footer__logo__text">Мир физики</div>
         </div>
     </div>
