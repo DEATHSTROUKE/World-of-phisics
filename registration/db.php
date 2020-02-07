@@ -1,5 +1,7 @@
 <?php
 
+ini_set('session.gc_maxlifetime', 10);
+ini_set('session.cookie_lifetime', 0);
 $driver = 'mysql';
 $host = 'localhost';
 $db_name = 'test_db';

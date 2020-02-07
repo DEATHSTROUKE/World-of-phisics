@@ -12,13 +12,15 @@ if (!empty($login) && !empty($pwd)) {
     if ($row['login'] and password_verify($pwd, $row['password'])) {
         $log = $row['login'];
         $_SESSION['user_login'] = $login;
-        echo "Привет, $log";
+        header('Location: http://phisics.ru/pages/profile.php');
+        exit();
+
     } else {
-        header('Location: http://test.ru/signin.php');
+        header('Location: http://phisics.ru/registration/signin.php');
         exit();
     }
 } else {
-    header('Location: http://test.ru/signin.php');
+    header('Location: http://phisics.ru/registration/signin.php');
     exit();
 }
 
