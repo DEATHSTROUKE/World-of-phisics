@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.header {
+    text-align: center;
+}
+
+.group__text {
+    display: flex;
+    flex-direction: column;
+    width: 204px;
+    margin: 0 auto;
+}
+
+.btns {
+    text-align: center;
+}
+
+.input__text {
+    height: 30px;
+}
+
+.input__btn {
+    height: 30px;
+    width: 100px;
+}

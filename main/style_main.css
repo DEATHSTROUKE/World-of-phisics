@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: Montserrat Alternates, sans-serif;
     margin: 0;
     padding: 0;
     font-size: 15px;
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Conteiner */
+/* Container */
 
 .container {
     width: 100%;
@@ -34,91 +34,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Header */
-
 .header {
-    background: url("../../images/intro.jpg") no-repeat center top / cover;
+    background: url("../images/intro.jpg") no-repeat center top / cover;
     height: 960px;
 }
 
-.menu {
-    background: #2C3D44;
-    opacity: 80%;
-}
-
-.header__logo {
-    display: flex;
-}
-
-.header__logo__img {
-    width: 64px;
-    height: 64px;
-}
-
-.header__logo__text {
-    color: white;
-    font-family: Montserrat Alternates, sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    margin-top: 12px;
-    margin-left: 50px;
-}
-
-/* Navigation */
-
-.nav {
-    margin-left: 50px;
-}
-
-.hamburger {
-    transition: 0.1s linear transform;
-}
-
-.line__hamburger {
-    border-bottom: 1px solid #fff;
-    width: 51px;
-    margin-top: 25px;
-}
-
-.sec__line {
-    margin-top: 5px;
-}
-
-.hamburger:hover {
-    transform: scale(1.2);
-}
-
-.btn__profile {
-    background: url("../../images/face.png") no-repeat center top / cover;
-    border: none;
-    padding: 15px 25px;
-    margin-top: 10px;
-    margin-left: 200px;
-    outline: none;
-    transition: 0.1s linear transform, 0.1s linear background, 0.1s linear color;
-}
-
-.btn__profile:hover {
-    transform: scale(1.1);
-}
-
-.btn__bell {
-    background: url("../../images/bell.png") no-repeat center top / cover;
-    border: none;
-    padding: 15px 15px;
-    margin-top: 5px;
-    margin-left: 50px;
-    outline: none;
-    transition: 0.1s linear transform, 0.1s linear background, 0.1s linear color;
-}
-
-.btn__bell:hover {
-    transform: scale(1.1);
-}
-
-.header__top {
-    display: flex;
-    justify-content: space-around;
-}
 
 /* Intro */
 
@@ -171,6 +91,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Prepair */
 
 .btn__blue {
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
     background: #0071E3;
     color: #fff;
     padding: 20px 60px;
@@ -178,7 +101,6 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     outline: none;
     transition: 0.1s linear transform;
-    font-weight: bold;
 }
 
 .btn__blue:hover {
@@ -252,6 +174,4 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat Alternates, sans-serif;
     font-weight: 600;
     font-size: 36px;
-    /*margin-top: 12px;*/
-    /*margin-left: 50px;*/
 }

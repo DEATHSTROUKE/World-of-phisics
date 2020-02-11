@@ -1,0 +1,126 @@
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #000;
+    line-height: 1.6;
+    overflow-y: scroll;
+}
+
+input {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+
+/* Container */
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+
+.menu {
+    background: #2C3D44;
+    opacity: 80%;
+}
+
+.header__logo {
+    display: flex;
+}
+
+.header__logo__img {
+    width: 64px;
+    height: 64px;
+}
+
+.header__logo__text {
+    color: white;
+    font-family: Montserrat Alternates, sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 12px;
+    margin-left: 50px;
+}
+
+
+/* Hamburger */
+
+.hamburger {
+    transition: 0.1s linear transform;
+}
+
+.line__hamburger {
+    border-bottom: 1px solid #fff;
+    width: 51px;
+    margin-top: 25px;
+}
+
+.sec__line {
+    margin-top: 5px;
+}
+
+.hamburger:hover {
+    transform: scale(1.2);
+}
+
+.btn__hamburger {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+
+/* Navigation */
+
+.nav {
+    margin-left: 50px;
+}
+
+.btn__profile {
+    background: url("/images/face.png") no-repeat center top / cover;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 10px;
+    margin-left: 200px;
+    outline: none;
+    transition: 0.1s linear transform, 0.1s linear background, 0.1s linear color;
+}
+
+.btn__profile:hover {
+    transform: scale(1.1);
+}
+
+.btn__bell {
+    background: url("/images/bell.png") no-repeat center top / cover;
+    border: none;
+    padding: 15px 15px;
+    margin-top: 5px;
+    margin-left: 50px;
+    outline: none;
+    transition: 0.1s linear transform, 0.1s linear background, 0.1s linear color;
+}
+
+.btn__bell:hover {
+    transform: scale(1.1);
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-around;
+}
+
+

@@ -19,28 +19,37 @@ if (!isset($_SESSION['user_login'])) {
     <title>Мир физики</title>
 </head>
 <body>
-<header class="header">
-    <div class="menu">
-        <div class="container">
-            <div class="header__top">
-                <div class="header__logo">
-                    <img src="../images/logo.png" alt="Мир физики" class="header__logo__img">
-                    <div class="header__logo__text">Мир физики</div>
-                </div>
-                <nav class="nav">
-                    <form method="get" action="../registration">
-                        <input type="submit" formaction="#" class="btn__profile"
-                               value="">
-                        <input type="submit" formaction="../registration/logout.php" class="btn__bell"
-                               value="">
-                    </form>
-                </nav>
-                <div class="hamburger">
-                    <hr class="line__hamburger">
-                    <hr class="line__hamburger sec__line">
-                </div>
+<?php require_once '../header.php' ?>
+<section class="info">
+    <div class="container">
+        <div class="title">
+            <h3>Профиль</h3>
+        </div>
+        <div class="data">
+            <div class="data__block">
+                <div class="data__text">Фамилия</div>
+                <input type="text" readonly class="data__inf">
+            </div>
+        </div>
+        <div class="data">
+            <div class="data__block">
+                <div class="data__text">Имя</div>
+                <input type="text" readonly class="data__inf">
+            </div>
+        </div>
+        <div class="data">
+            <div class="data__block">
+                <div class="data__text">Email</div>
+                <input type="text" readonly class="data__inf">
+            </div>
+        </div>
+        <div class="data">
+            <div class="data__block">
+                <div class="data__text">Класс</div>
+                <input type="text" readonly class="data__inf">
             </div>
         </div>
     </div>
+</section>
 </body>
 </html>
