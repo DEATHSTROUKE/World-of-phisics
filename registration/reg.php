@@ -18,6 +18,6 @@ if (!empty($login) && !empty($pwd)) {
         echo 'Пользователь с таким именем уже существует';
     }
 } else {
-    header('Location: http://phisics.ru/registration/signin.php');
+    header('Location: signup.php');
     exit();
 }

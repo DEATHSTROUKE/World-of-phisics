@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600,700|Montserrat:400,600,700&display=swap&subset=cyrillic,cyrillic-ext"
           rel="stylesheet">
-    <link href="profile/style.css" rel="stylesheet">
+    <link href="promo/style_reg.css" rel="stylesheet">
     <title>Мир физики</title>
 </head>
 <body>
@@ -20,17 +20,19 @@
                     <div class="header__logo__text">Мир физики</div>
                 </div>
                 <nav class="nav">
-                    <form method="get">
-                        <input type="submit" formaction="profile.php" class="btn_profile"
-                               value="">
-                        <input type="submit" formaction="#" class="btn_bell"
-                               value="">
+                    <form method="get" action="">
+                        <input type="submit" formaction="signin.php" class="btn__disactive"
+                               value="Вход">
+                        <input type="submit" formaction="signin.php" class="btn__disactive"
+                               value="Регистрация">
                     </form>
                 </nav>
-                <div class="hamburger">
-                    <hr class="line__hamburger">
-                    <hr class="line__hamburger sec__line">
-                </div>
+                <form action="" method="get">
+                    <button class="hamburger" formaction="#">
+                        <hr class="line__hamburger">
+                        <hr class="line__hamburger sec__line">
+                    </button>
+                </form>
             </div>
         </div>
     </div>

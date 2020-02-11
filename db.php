@@ -1,7 +1,5 @@
 <?php
 
-ini_set('session.gc_maxlifetime', 10);
-ini_set('session.cookie_lifetime', 0);
 $driver = 'mysql';
 $host = 'localhost';
 $db_name = 'test_db';
@@ -14,7 +12,7 @@ try {
         $db_user, $db_pass, $option);
 } catch (PDOException $e) {
     echo $e;
-    die('Не могу подключиться к базе данных');
+    die('Невозможно подключиться к базе данных');
 }
 
 session_start();

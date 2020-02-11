@@ -8,6 +8,10 @@ body {
     overflow-y: scroll;
 }
 
+input {
+    outline: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -32,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Header */
 
 .header {
-    background: url("images/intro.jpg") no-repeat center top / cover;
     height: 960px;
 }
 
@@ -83,24 +86,31 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.2);
 }
 
-.btn__disactive {
-    font-family: Montserrat Alternates, sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: white;
-    background: none;
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 10px 20px;
+.btn__profile {
+    background: url("../../images/face.png") no-repeat center top / cover;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 10px;
+    margin-left: 200px;
+    outline: none;
+    transition: 0.1s linear transform, 0.1s linear background, 0.1s linear color;
+}
+
+.btn__profile:hover {
+    transform: scale(1.1);
+}
+
+.btn__bell {
+    background: url("../../images/bell.png") no-repeat center top / cover;
+    border: none;
+    padding: 15px 15px;
     margin-top: 5px;
     margin-left: 50px;
     outline: none;
     transition: 0.1s linear transform, 0.1s linear background, 0.1s linear color;
 }
 
-.btn__disactive:hover {
-    color: black;
-    background: white;
+.btn__bell:hover {
     transform: scale(1.1);
 }
 
@@ -159,15 +169,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Prepair */
 
-.btn_blue {
+.btn__blue {
     background: #0071E3;
     color: #fff;
     padding: 20px 60px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    transition: 0.1s linear transform;
 }
 
-.btn_blue:hover {
+.btn__blue:hover {
     background: #0071E3;
     color: #fff;
+    transform: scale(1.1);
 }
 
 .prepare {
@@ -190,11 +205,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 424px;
     transition: 0.2s linear transform;
 }
-
-.pre__img:hover {
-    transform: scale(1.1);
-}
-
 
 .pre__img2 {
     width: 622px;

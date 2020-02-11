@@ -1,7 +1,6 @@
 <?php
 require_once "../db.php";
 
-
 $login = trim($_POST['login']);
 $pwd = trim($_POST['password']);
 if (!empty($login) && !empty($pwd)) {
@@ -12,15 +11,15 @@ if (!empty($login) && !empty($pwd)) {
     if ($row['login'] and password_verify($pwd, $row['password'])) {
         $log = $row['login'];
         $_SESSION['user_login'] = $login;
-        header('Location: http://phisics.ru/pages/profile.php');
+        header('Location: /');
         exit();
 
     } else {
-        header('Location: http://phisics.ru/registration/signin.php');
+        header('Location: signin.php');
         exit();
     }
 } else {
-    header('Location: http://phisics.ru/registration/signin.php');
+    header('Location: signin.php');
     exit();
 }
 

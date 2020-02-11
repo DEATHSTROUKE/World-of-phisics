@@ -1,3 +1,11 @@
+<?php //require_once "../db.php";
+session_start();
+if (!isset($_SESSION['user_login'])) {
+    header('Location: ../registration/promo.php');
+    exit();
+} else {
+    echo $_SESSION['user_login'];
+} ?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -7,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600,700|Montserrat:400,600,700&display=swap&subset=cyrillic,cyrillic-ext"
           rel="stylesheet">
-    <link href="profile/style.css" rel="stylesheet">
+    <link href="profile/style_profile.css" rel="stylesheet">
     <title>Мир физики</title>
 </head>
 <body>
@@ -21,9 +29,9 @@
                 </div>
                 <nav class="nav">
                     <form method="get" action="../registration">
-                        <input type="submit" formaction="#" class="btn_profile"
+                        <input type="submit" formaction="#" class="btn__profile"
                                value="">
-                        <input type="submit" formaction="#" class="btn_bell"
+                        <input type="submit" formaction="../registration/logout.php" class="btn__bell"
                                value="">
                     </form>
                 </nav>
@@ -34,63 +42,5 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="intro">
-            <div class="intro__title">
-                Онлайн школа <br> физики
-            </div>
-            <div class="suptitle">
-                <input type="submit" class="intro__btn" value="О нас">
-            </div>
-        </div>
-    </div>
-</header>
-<section>
-    <div class="container">
-        <div class="about__title">
-            О нас
-            <hr class="line__title">
-        </div>
-        <div class="prepare">
-            <div class="pre__text">
-                Готовься к предстоящим экзаменам
-                <input type="submit" class="btn__disactive btn_blue" value="Вперед">
-            </div>
-            <img src="../images/img2.jpg" alt="" class="pre__img">
-        </div>
-    </div>
-</section>
-<section>
-    <div class="container">
-        <hr class="line__title">
-        <div class="prepare">
-            <img src="../images/img1.jpg" alt="" class="pre__img pre__img2">
-            <div class="pre__text">
-                Получай домашние задания от преподавателя
-                <input type="submit" class="btn__disactive btn_blue" value="Посмотреть">
-            </div>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="container">
-        <hr class="line__title">
-        <div class="prepare">
-            <div class="pre__text">
-                Улучшай свой рейтинг и соревнуйся
-                <input type="submit" class="btn__disactive btn_blue" value="Рейтинг">
-            </div>
-            <img src="../images/rating.jpg" alt="" class="pre__img pre__img3">
-        </div>
-    </div>
-</section>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__logo">
-            <img src="../images/logo.png" alt="Мир физики" class="footer__logo__img">
-            <div class="header__logo__text footer__logo__text">Мир физики</div>
-        </div>
-    </div>
-</footer>
 </body>
 </html>

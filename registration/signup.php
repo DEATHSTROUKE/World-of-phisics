@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="style_reg.css">
     <title>Test</title>
 </head>
 <body>
 <div class="container">
     <h1 class="header">Форма регистрации</h1>
-    <form method="post" class="form__reg">
+    <form method="post" action="/registration/auth.php" class="form__reg">
         <div class="group__text">
             <input type="text" name="login" placeholder="Логин" class="input__text">
             <input type="password" name="password" placeholder="Пароль" class="input__text">
