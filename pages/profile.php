@@ -1,11 +1,13 @@
-<?php //require_once "../db.php";
+<?php require_once "../db.php";
 session_start();
 if (!isset($_SESSION['user_login'])) {
-    header('Location: ../registration/promo.php');
+    header('Location: /registration/promo.php');
     exit();
 } else {
     echo $_SESSION['user_login'];
-} ?>
+}
+$pdo
+?>
 <!doctype html>
 <html lang="ru">
 <head>

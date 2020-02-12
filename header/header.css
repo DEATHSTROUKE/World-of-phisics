@@ -18,6 +18,7 @@ a {
 
 *, :after, :before {
     box-sizing: border-box;
+    outline: none;
 }
 
 
@@ -36,6 +37,7 @@ a {
 .menu {
     background: #2C3D44;
     opacity: 80%;
+    height: 70px;
 }
 
 .header__logo {
@@ -73,14 +75,16 @@ a {
     margin-top: 5px;
 }
 
-.hamburger:hover {
-    transform: scale(1.2);
-}
+/*.hamburger:hover {*/
+/*    transform: scale(1.2);*/
+/*}*/
 
 .btn__hamburger {
     background: none;
     border: none;
     outline: none;
+    margin-bottom: 25px;
+
 }
 
 
@@ -118,9 +122,41 @@ a {
     transform: scale(1.1);
 }
 
+
+.nav__form {
+
+}
+
 .header__top {
     display: flex;
     justify-content: space-around;
 }
 
+.ham__menu {
+    display: flex;
+    flex-direction: column;
+}
 
+.btn__ham__menu {
+    display: none;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    background: none;
+    color: white;
+    border: none;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.btn__ham__menu:hover {
+    color: #3e3e3e;
+}
+
+
+.back__ham {
+    display: none;
+    flex-direction: column;
+    background: slategrey;
+    padding: 30px 30px 0;
+}

@@ -15,11 +15,19 @@ if (!empty($email) && !empty($pwd)) {
         exit();
 
     } else {
-        header('Location: signin.php');
-        exit();
+        ?>
+        <script>
+            alert('Неверно введен логин или пароль');
+            location.href = 'signin.php';
+        </script>
+        <?php
     }
 } else {
-    header('Location: signin.php');
-    exit();
+    ?>
+    <script>
+        alert('Не введен логин или пароль');
+        location.href = 'signin.php';
+    </script>
+    <?php
 }
 

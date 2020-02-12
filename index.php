@@ -1,6 +1,6 @@
 <?php require_once "db.php";
 if (!isset($_SESSION['user_login'])) {
-    header('Location: registration/promo.php');
+    header('Location: /registration/promo.php');
     exit();
 } else {
     echo $_SESSION['user_login'];
@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_login'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600,700|Montserrat:400,600,700&display=swap&subset=cyrillic,cyrillic-ext"
           rel="stylesheet">
-    <link href="main/style_main.css" rel="stylesheet">
+    <link href="/main/style_main.css" rel="stylesheet">
     <title>Мир физики</title>
 </head>
 <body>
