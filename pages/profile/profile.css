@@ -1,14 +1,11 @@
 body {
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: Montserrat Alternates, sans-serif;
     margin: 0;
     padding: 0;
     font-size: 15px;
     color: #000;
     line-height: 1.6;
     overflow-y: scroll;
-}
-
-input {
     outline: none;
 }
 
@@ -24,7 +21,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-
 /* Conteiner */
 
 .container {
@@ -34,6 +30,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Info */
+.data {
+    margin-bottom: 20px;
+}
 
 .info {
     text-align: center;
@@ -42,6 +41,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .data__text {
     margin-right: 90px;
+    font-weight: bold;
+}
+
+.data__inf {
+    padding: 10px;
 }
 
 

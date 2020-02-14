@@ -11,8 +11,10 @@ if (!empty($email) && !empty($pwd)) {
     if ($row['email'] and password_verify($pwd, $row['password'])) {
         $log = $row['email'];
         $_SESSION['user_login'] = $email;
-        header('Location: /');
-        exit();
+        ?>
+        <script>
+            location.href = '/index.php';
+        </script> <?php
 
     } else {
         ?>

@@ -16,15 +16,22 @@ if (!empty($email) && !empty($pwd) && !empty($name) && !empty($surname)) {
         $sql = "INSERT INTO users(email, password, name, surname) VALUES (?, ?, ?, ?)";
         $rec = $pdo->prepare($sql);
         $rec->execute([$email, $pwd, $name, $surname]);
-//        echo 'Аккаунт успешно зарегистрирован';
-        header('Location: ../index.php');
-        exit();
+        ?>
+        <script>
+            alert('Аккаунт успешно зарегистрирован');
+            location.href = '/index.php';
+        </script> <?php
     } else {
-//        echo 'Пользователь с таким именем уже существует';
-        header('Location: signup.php');
-        exit();
+        ?>
+        <script>
+            alert('Данные email уже зарегистрирован');
+            location.href = '/registration/signin.php';
+        </script> <?php
     }
 } else {
-    header('Location: signup.php');
-    exit();
+    ?>
+    <script>
+        alert('Заполните информацию о себе');
+        location.href = '/registration/signin.php';
+    </script> <?php
 }

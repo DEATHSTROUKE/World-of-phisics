@@ -9,8 +9,8 @@
             </div>
             <nav class="nav">
                 <form method="get" class="nav__form">
-                    <input type="submit" formaction="/pages/profile.php" class="btn__profile"
-                           value="">
+                    <button type="submit" formaction="/pages/profile.php" class="btn__profile"><i
+                                class="fa fa-user"></i></button>
                     <input type="submit" formaction="#" class="btn__bell"
                            value="">
                 </form>
@@ -23,6 +23,9 @@
                             <hr class="line__hamburger sec__line">
                         </button>
                         <div class="back__ham">
+                            <button class="btn__ham__menu" formaction="/index.php"><i class="fa fa-home"></i>
+                                Главная
+                            </button>
                             <button class="btn__ham__menu" formaction="/pages/profile.php"><i class="fa fa-user"></i>
                                 Профиль
                             </button>

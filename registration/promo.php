@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600,700|Montserrat:400,600,700&display=swap&subset=cyrillic,cyrillic-ext"
           rel="stylesheet">
-    <link href="promo/style_reg.css" rel="stylesheet">
+    <link href="promo/promo.css" rel="stylesheet">
     <title>Мир физики</title>
 </head>
 <body>
