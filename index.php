@@ -70,13 +70,6 @@ if (!isset($_SESSION['user_login'])) {
         </div>
     </div>
 </section>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__logo">
-            <img src="images/logo.png" alt="Мир физики" class="footer__logo__img">
-            <div class="header__logo__text footer__logo__text">Мир физики</div>
-        </div>
-    </div>
-</footer>
+<? require_once 'footer.php' ?>
 </body>
 </html>

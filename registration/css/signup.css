@@ -26,3 +26,13 @@
     height: 30px;
     width: 100px;
 }
+
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input__radio__text {
+    margin: 0 15px 0 5px;
+}

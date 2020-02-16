@@ -1,0 +1,27 @@
+/* Footer */
+
+.footer {
+    background: #2C3D44;
+    width: 100%;
+    height: 170px;
+    padding: 35px;
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer__logo__img {
+    width: 110px;
+    height: 110px;
+}
+
+.footer__logo__text {
+    color: white;
+    font-family: Montserrat Alternates, sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+}

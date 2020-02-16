@@ -12,30 +12,7 @@
 </head>
 <body>
 <header class="header">
-    <div class="menu">
-        <div class="container">
-            <div class="header__top">
-                <div class="header__logo">
-                    <img src="../images/logo.png" alt="Мир физики" class="header__logo__img">
-                    <div class="header__logo__text">Мир физики</div>
-                </div>
-                <nav class="nav">
-                    <form method="get" action="">
-                        <input type="submit" formaction="signin.php" class="btn__disactive"
-                               value="Вход">
-                        <input type="submit" formaction="signin.php" class="btn__disactive"
-                               value="Регистрация">
-                    </form>
-                </nav>
-                <form action="" method="get">
-                    <button class="hamburger" formaction="#">
-                        <hr class="line__hamburger">
-                        <hr class="line__hamburger sec__line">
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <? require_once '../header.php' ?>
     <div class="container">
         <div class="intro">
             <div class="intro__title">
@@ -86,13 +63,6 @@
         </div>
     </div>
 </section>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__logo">
-            <img src="../images/logo.png" alt="Мир физики" class="footer__logo__img">
-            <div class="header__logo__text footer__logo__text">Мир физики</div>
-        </div>
-    </div>
-</footer>
+<? require_once '../footer.php' ?>
 </body>
 </html>

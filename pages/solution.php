@@ -28,14 +28,10 @@ if ($_GET['class'] == '9') {
     $sql_rec = "SELECT numbers FROM var_ege WHERE id = ?";
     $exam = 1;
 }
+$var = (int)$_GET['var'];
+$sql_rec = "SELECT task FROM tasks WHERE exam = ? and variant = ?";
 $res = $pdo->prepare($sql_rec);
-$res->execute([$_GET['var']]);
-$row = $res->fetch(PDO::FETCH_ASSOC);
-$nums = explode(' ', $row['numbers']);
-print_r($nums);
-$sql_rec = "SELECT task FROM tasks WHERE exam = ? and id = ?";
-$res = $pdo->prepare($sql_rec);
-$res->execute($nums);
+$res->execute([$exam, $var]);
 ?>
 <!doctype html>
 <html lang="ru">
@@ -53,7 +49,7 @@ $res->execute($nums);
 <? while ($row = $res->fetch(PDO::FETCH_ASSOC)): ?>
     <div class="container">
         <div class="question">
-            <? $row['task'] ?>
+            <? echo $row['task'] ?>
         </div>
         <div class="picture">
 
