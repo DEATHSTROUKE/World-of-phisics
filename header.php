@@ -32,6 +32,11 @@
                         </button>
                         <div class="back__ham">
                             <? if (isset($_SESSION['user_login'])): ?>
+                                <? if ($_SESSION['role'] == 'admin'): ?>
+                                    <button class="btn__ham__menu" formaction="/admin/admin_panel.php"><i class="fa fa-user-secret""></i>
+                                        Admin
+                                    </button>
+                                <? endif; ?>
                                 <button class="btn__ham__menu" formaction="/index.php"><i class="fa fa-home"></i>
                                     Главная
                                 </button>

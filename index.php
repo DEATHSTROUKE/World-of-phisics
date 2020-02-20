@@ -70,6 +70,8 @@ if (!isset($_SESSION['user_login'])) {
         </div>
     </div>
 </section>
-<? require_once 'footer.php' ?>
+<footer>
+    <? require_once 'footer.php' ?>
+</footer>
 </body>
 </html>
