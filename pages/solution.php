@@ -21,15 +21,14 @@ if (!isset($_GET['class'])) {
         location.href = '/pages/choose.php';
     </script> <?php
 }
-if ($_GET['class'] == '9') {
-    $sql_rec = "SELECT numbers FROM var_oge WHERE id = ?";
+if ($_GET['class'] <= '9') {
+    $sql_rec = "SELECT num, task FROM tasks WHERE exam = ? AND variant = ?";
     $exam = 0;
-} elseif ($_GET['class'] == '11') {
-    $sql_rec = "SELECT numbers FROM var_ege WHERE id = ?";
+} else {
+    $sql_rec = "SELECT num, task FROM tasks WHERE exam = ? AND variant = ?";
     $exam = 1;
 }
 $var = (int)$_GET['var'];
-$sql_rec = "SELECT task FROM tasks WHERE exam = ? and variant = ?";
 $res = $pdo->prepare($sql_rec);
 $res->execute([$exam, $var]);
 ?>
@@ -41,21 +40,34 @@ $res->execute([$exam, $var]);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Мир физики</title>
-    <link href="variants/variants.css" rel="stylesheet">
+    <link href="solution/solution.css" rel="stylesheet">
 </head>
 <body>
 <header><?php require_once '../header.php' ?></header>
-<h2>Удачи)</h2>
-<? while ($row = $res->fetch(PDO::FETCH_ASSOC)): ?>
+<div id="content">
     <div class="container">
-        <div class="question">
-            <? echo $row['task'] ?>
-        </div>
-        <div class="picture">
+        <h2>Вариант № <? echo $var ?></h2>
+        <input name="exam" value="<? echo $exam ?>" style="display: none">
+        <input name="variant" value="<? echo $var ?>" style="display: none">
+        <? while ($row = $res->fetch(PDO::FETCH_ASSOC)): ?>
+            <div class="task">
+                <div class="number">
+                    <input name="num" value="<? echo $row['num'] ?>" style="display:none;">
+                    <strong>Задание №<? echo $row['num'] ?></strong>
+                </div>
+                <div class="question">
+                    <? echo $row['task'] ?>
+                </div>
+                <div class="picture">
 
-        </div>
-        <input type="text">
+                </div>
+                <input type="text" name="ans">
+                <hr>
+            </div>
+        <? endwhile; ?>
+        <button onclick="finish()">Завершить тест</button>
     </div>
-<? endwhile; ?>
+</div>
+<script src="solution/solution.js"></script>
 </body>
 </html>

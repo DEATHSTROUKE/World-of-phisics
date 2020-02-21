@@ -51,7 +51,7 @@ function create_form()
 </header>
 <section class="main">
     <div class="container">
-        Редактирование варианта
+        <h2>Редактирование варианта</h2>
         <div class="actions">
             <button onclick="add_form()">Добавить</button>
             <button>Удалить</button>

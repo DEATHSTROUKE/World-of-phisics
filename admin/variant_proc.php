@@ -8,7 +8,6 @@ if (!isset($_SESSION['user_login']) or $_SESSION['role'] != 'admin') {
     <?php
 }
 $params = json_decode($_POST['params']);
-//print_r($params);
 $m = $params->task;
 $exam = (int)$params->exam;
 $var = (int)$params->variant;

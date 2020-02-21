@@ -7,8 +7,11 @@ if (!isset($_SESSION['user_login'])) {
         location.href = '/registration/promo.php';
     </script> <?php
 }
-if (isset($_GET ['class'])) {
+if (isset($_SESSION['class'])) {
+    $class = $_SESSION['class'];
+} elseif (isset($_GET['class'])) {
     $class = $_GET['class'];
+    $_SESSION['class'] = $class;
 } else {
     $sql_rec = "SELECT class FROM users WHERE email = ?";
     $res = $pdo->prepare($sql_rec);
@@ -40,10 +43,13 @@ if (isset($_GET ['class'])) {
 <h2>Выберите вариант</h2>
 <?php
 if ($class <= 9) {
-    $res = $pdo->query("SELECT id FROM var_oge");
-
+    $sql_rec = 'SELECT DISTINCT variant FROM tasks WHERE exam = ? ORDER BY variant';
+    $res = $pdo->prepare($sql_rec);
+    $res->execute([0]);
 } else {
-    $res = $pdo->query("SELECT id FROM var_ege");
+    $sql_rec = 'SELECT DISTINCT variant FROM tasks WHERE exam = ? ORDER BY variant';
+    $res = $pdo->prepare($sql_rec);
+    $res->execute([1]);
 }
 ?>
 <? while ($row = $res->fetch(PDO::FETCH_ASSOC)): ?>
@@ -51,9 +57,9 @@ if ($class <= 9) {
         <div class="variant">
             <form method="get">
                 <div class="var__text">
-                    Вариант №<? echo $row['id'] ?>
+                    Вариант №<? echo $row['variant'] ?>
                 </div>
-                <a href= <? echo "/pages/solution.php?class=" . $_GET['class'] . "&var=" . $row['id'] ?>>Вперед</a>
+                <a href= <? echo "/pages/solution.php?class=" . $_GET['class'] . "&var=" . $row['variant'] ?>>Вперед</a>
             </form>
         </div>
     </div>
